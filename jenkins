@@ -12,9 +12,11 @@ pipeline {
             }
         }
         stage('test') { 
-            steps {
-                echo "test sussesful" 
+            steps { withSonarQubeEnv ('sonar') {
+                sh 'mvn sonar:sonar'
+                } 
             }
         }
     }
 }
+
