@@ -17,6 +17,18 @@ pipeline {
                 } 
             }
         }
+        stage('QualityCheck') { 
+            steps {
+                timeout(5) {
+        waitForQualityGate true
+                }
+            }
+        }
+        stage('Deploy') { 
+            steps {
+                 echo 'Deploy successful'
+            }
+        }
     }
 }
 
