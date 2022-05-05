@@ -12,7 +12,8 @@ pipeline {
             steps {
                 echo "build sussesful"
        
-      
+      } 
+      }
         stage('Test') { 
             steps {
                  echo "test sussesful"
