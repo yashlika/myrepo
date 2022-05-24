@@ -1,0 +1,42 @@
+pipeline {
+    agent any 
+    stages {
+        stage('Pull') { 
+            steps {
+               git 'https://github.com/citb34/studentapp-ui.git'
+            }
+        }
+        stage('Build') { 
+            steps {
+               echo 'Buil Successful'  
+            }
+        }
+        stage('Test') { 
+            steps {
+              echo 'Test Successful'   
+            }
+        }
+        stage('Deploy') { 
+            steps {
+                 echo 'Deploy Successful'
+            }
+        }
+        stage('ProdTest') { 
+            steps {
+              echo 'ProdTest Successful'   
+            }
+        }
+        stage('ProdDeploy') { 
+            steps {
+                 echo 'ProdDeploy Successful'
+            }
+        }
+         stage('ProdDeploy1') { 
+            steps {
+                 echo 'ProdDeploy Successful'
+            }
+        }
+    }
+}
+
+
