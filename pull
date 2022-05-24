@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Pull') { 
             steps {
-               git 'https://github.com/citb34/studentapp-ui.git'
+              git credentialsId: '678', url: 'https://github.com/yashlika/myrepo.git'
             }
         }
         stage('Build') { 
