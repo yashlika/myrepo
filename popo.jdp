@@ -3,9 +3,7 @@ pipeline {
     stages {
         stage('pull') { 
             steps {
-               
-               echo"pull sussesful"
-                
+               git 'https://github.com/yashlika/studentapp-ui.git' 
             }
         }
         stage('build') { 
@@ -18,9 +16,10 @@ pipeline {
                echo"test sussesful" 
             }
         }
-        stage('deploy')
+        stage('deploy') {
+            steps {
         echo"deploy sussesful"
-        }
+            }
         }
     }
 }
