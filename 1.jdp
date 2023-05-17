@@ -1,0 +1,29 @@
+pipeline { 
+    agent any 
+    stages {
+        stage('Pull') {
+            steps { 
+                echo "pull sussesful"
+        }
+    }
+    stages {
+        stage('Build') { 
+            steps { 
+                echo "build sussesful"
+            }
+        }
+        stage('Test'){
+            steps {
+                echo "test sussesful"
+                 
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo "deploy sussesful"
+            }
+        }
+    }
+}
+
+
